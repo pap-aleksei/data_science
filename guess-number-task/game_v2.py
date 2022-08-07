@@ -22,7 +22,7 @@ def random_predict(number: int = 1) -> int:
         predict_number = np.random.randint(min_number, max_number+1)  # Предполагаем число с учетом пределов для угадывания
         if number < predict_number:         # Устанавливаем новые пределы:
             max_number = predict_number     # Максимальный
-        else:
+        if number > predict_number:
             min_number = predict_number     # Минимальный
         
         if number == predict_number:
